@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+from player import Player
 
 def main():
   pygame.init()
@@ -13,6 +14,11 @@ def main():
         return
       
     screen.fill(("black"))
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, PLAYER_RADIUS)
+    player.draw(screen)
+
+
+
     pygame.display.flip()
     
     # limit the frame rate to 60 frames per second
